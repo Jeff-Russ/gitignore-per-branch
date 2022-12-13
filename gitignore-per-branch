@@ -227,7 +227,7 @@ then
 	if [ -f "${gitdirroot}/.git/hooks/post-checkout" ]; then 
 		rm "${gitdirroot}/.git/hooks/post-checkout"
 	else
-		echo "Nothing to remove: .git/hooks/post-checkout not found."
+		echo "Nothing to remove: ${gitdirroot}/.git/hooks/post-checkout not found."
 	fi
 elif [[ "$1" == '__GENERATE_README__' ]] ; then
 	# for use in developing gitignore-per-branch only!
