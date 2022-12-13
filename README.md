@@ -25,14 +25,15 @@ include the `gitignore-per-branch` script within your repository.
 From your local repository's root directory, the following will add the script:  
 
 ```sh
-% wget https://raw.githubusercontent.com/Jeff-Russ/gitignore-per-branch/gitignore-per-branch
+% wget https://raw.githubusercontent.com/Jeff-Russ/gitignore-per-branch/main/gitignore-per-branch
+% chmod 755 ./gitignore-per-branch
 ```
 
 If you find yourself doing this a lot, for different repositories, create a 
 reusable command aliases this (for bash terminals):  
 
 ```sh
-% echo "\n"'alias add-gitignore-per-branch="wget https://raw.githubusercontent.com/Jeff-Russ/gitignore-per-branch/gitignore-per-branch"' >> ~/.bashrc 
+% echo "\n"'alias add-gitignore-per-branch="wget https://raw.githubusercontent.com/Jeff-Russ/gitignore-per-branch/main/gitignore-per-branch && chmod 755 ./gitignore-per-branch"' >> ~/.bashrc 
 ```
 
 For zsh terminals, do the same but with `~/.zshrc` in place of `/.bashrc`.  
