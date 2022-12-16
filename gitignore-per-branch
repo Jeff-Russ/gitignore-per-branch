@@ -143,10 +143,9 @@ gitdirroot=$(pwd)
 if git rev-parse --is-inside-work-tree >/dev/null 2>&1
 then
 	while ! [ -d "${gitdirroot}/.git" ] && [[ "$gitdirroot" != "/" ]] ; do 
-		cd ../
-		gitdirroot=$(pwd)
+		gitdirroot=$(cd "${gitdirroot}/.." && pwd)
 	done
-  if [[ "$gitdirroot" != "/" ]] &&  ! [ -d "${gitdirroot}/.git" ] ; then
+  if [[ "$gitdirroot" == "/" ]] && ! [ -d "${gitdirroot}/.git" ] ; then
     gitdirroot=""
   fi  
 else
